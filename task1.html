@@ -5,63 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>amazon</title>
+    <style>
+        button{
+            border: 2px solid #0f1111;
+            cursor: pointer;
+        }
+        button:hover{
+            border-color: #FFFFFF;
+        }
+        .location #text{
+            color: #FFFFFF;
+        }
+    </style>
 </head>
 <body>
     <!-- Search bar -->
     <div class="searchBar">
         <div>
-            <img src="./assets/Amazon-India-Logo-PNG-White2.png" width="120px" height="30px">
+            <button>
+                <img src="./assets/Amazon-India-Logo-PNG-White2.png" width="120px" height="100%">
+            </button>
         </div>
-        <div id="location">
-            <div id="imageLocation"><img src="./assets/image2.jpg" width="20px" height="30px"></div>
-            <div id="text">
-                <p style="margin-bottom: 0px; font-size: small;">Deliver to Jaipur 302031</p>
-                <h3 style="margin-top: 0px;">Update Location</h3>
-            </div>
+        <div class="location">
+            <button>
+                <div class="loc">
+                    <div id="imageLocation">
+                        <img src="./assets/image2.jpg" width="20px" height="100%">
+                    </div>
+                    <div class="text">
+                        <p>Deliver to Jaipur 302031</p>
+                        <p class="highlight">Update Location</p>
+                    </div>
+                </div>
+            </button>
         </div>
-        <span class="search">
+        <div class="search">
             <form action="" method="get">
                 <div>
                     <label for="options"></label>
-                    <select name="options" id="options" style="height: 30px;width:50px; border: 0px;background-color: #dadada;">
+                    <select name="options" id="options" style="height: 35px;width:50px; border: 0px;background-color: #dadada;">
                         <option value="all">ALL</option>
                         <option value="primeProducts">Prime Products</option>
                         <option value="amazonFresh">Amazon Fresh</option>
                         <option value="amazonFashion">Amazon Fashion</option>
                     </select>
                 </div>
-                <div>
-                    <input type="text" placeholder="Search Amazon.in" style="height:30px;width: 500px;padding: 0px; border: 0px;font-size:90%;padding-left: 5px;">
+                <div class="bar">
+                    <input type="text" placeholder="Search Amazon.in">
                 </div>
                 <div>
-                    <button type="submit" style="padding: 0px; border: 0px;height: 30px;width: 30px;background-color: #daa520;">
+                    <button type="submit" style="padding: 0px; border: 0px;height: 35px;width: 30px;background-color: #daa520;">
                         <img src="./assets/search-glass-icon-back.png" alt="searchIcon" style="height: 20px;width: 20px;padding: 0px;">
                     </button>
                 </div>
             </form>
-        </span>
-        <div>
-            <label for="options"></label>
-            <select name="options" id="options" style="height: 30px;width:60px; border: 0px;background-color: #0f1111;color: #FFFFFF;font-size:1em;font-weight: 100;">
-                <strong>
-                    <option value="indianEnglish">ENG</option>
-                    <option value="indianHindi">HINDI</option>
-                    <option value="indianMarathi">MARATHI</option>
-                    <option value="indianKannada">KANNADA</option>
-                </strong>
-            </select>
         </div>
         <div>
-            <p style="margin-bottom: 0px;">Hello,sign in</p>
-            <h3 style="margin-top: 0px;">Account & Lists</h3>
+            <button>
+                <label for="options"></label>
+                <select name="options" id="options" style="height: 30px;width:60px; border: 0px;background-color: #0f1111;color: #FFFFFF;font-size:1em;font-weight: 100;">
+                    <strong>
+                        <option value="indianEnglish">ENG</option>
+                        <option value="indianHindi">HINDI</option>
+                        <option value="indianMarathi">MARATHI</option>
+                        <option value="indianKannada">KANNADA</option>
+                    </strong>
+                </select>
+            </button>
         </div>
-        <div>
-            <p style="margin-bottom: 0px;">Returns</p>
-            <h3 style="margin-top: 0px;">& Orders</h3>
+        <div class="text">
+            <button>
+                <p>Hello,sign in</p>
+                <p class="highlight">Account & Lists</p>
+            </button>
+        </div>
+        <div class="text">
+            <button>
+                <p >Returns</p>
+                <p class="highlight">& Orders</p>
+            </button>
         </div>
         <div class="Cart">
-            <!-- <img src="./assets/image.jpg" alt="cartImage" height="30px" width="20px"> -->
-            <h3>Cart</h3>
+            <button style="color: #FFFFFF;">
+                <div class="cart">
+                    <div>
+                        <img src="./assets/image3.jpg" alt="cartImage" height="100%" width="100%">
+                    </div>
+                    <div>
+                        <h3 class="cartText" style="margin: 0px;">Cart</h3>
+                    </div>
+                </div>
+            </button>
         </div>
     </div>
 
@@ -109,7 +143,7 @@
                 <div>                
                     <button type="button">Home Kitchen</button>
                 </div>
-                <div>               
+                <div class="amazonPay">               
                     <button type="button">Amazon pay</button>
                 </div>
             </div>
